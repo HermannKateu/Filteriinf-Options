@@ -10,9 +10,12 @@
     </div>
     <div class="flex flex-col space-y-2 h-[460px] overflow-auto">
       <div class="flex item-center space-x-2"  v-for="message in selectedOptions">
-         <input type="checkbox" class="w-4 h-4 mt-1.5"/>
-            <span class="flex items-center justify-center">{{ message }}</span>
-         </div>
+         <input type="checkbox" class="w-4 h-4 mt-1.5" />
+        <span class="flex items-center justify-center" v-if="selectedOptions.includes(message)">{{ message }}</span>
+      </div>
+      <span class="text-gray" v-if="selectedOptions.length === 0">
+          No option Match your research
+        </span>
     </div>
   </section>
 </template>
