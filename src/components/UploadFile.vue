@@ -1,7 +1,7 @@
 <template>
     <div class="h-screen w-full absolute image-background z-50  flex justify-center items-center" v-if="isImageZommed">
         <span class="text-white absolute text-4xl right-10 top-8 cursor-pointer" @click="isImageZommed = false">x</span>
-        <img :src="zoomedImageUrl" class="w-[60%] h-[80%] shadow mx-auto border" alt="image-zoom"/>
+        <img :src="zoomedImageUrl" class="w-[60%] h-[80%] shadow mx-auto border object-center" alt="image-zoom"/>
     </div>
     <form class="w-[400px] mx-auto flex flex-col items-center justify-center h-[500px] bg-gray-200 rounded" id="form">
         <div  class="w-[350px] h-[300px] border-2 rounded-lg border-dotted border-black p-1">
